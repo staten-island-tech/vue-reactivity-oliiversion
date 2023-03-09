@@ -4,7 +4,7 @@ import TheWelcome from "../components/TheWelcome.vue";
 
 <template>
   <div class="Home">
-    <h1>Hello</h1>
+    <h1>{{ sillyquote }}</h1>
   </div>
 </template>
 
@@ -12,6 +12,11 @@ import TheWelcome from "../components/TheWelcome.vue";
 export default {
   name: "Home",
   components: {},
+  data() {
+    return {
+      sillyquote: "them silly little kids",
+    };
+  },
 };
 </script>
 

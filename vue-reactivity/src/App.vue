@@ -15,8 +15,8 @@
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="/">Good Morning Sunshine!</router-link>
+        <router-link to="/about">The world says Hello!</router-link>
       </nav>
     </div>
   </header>
