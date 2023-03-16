@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import button from "../components/button.vue";
 export default {
   name: "about",
   components: {},
@@ -14,6 +15,12 @@ export default {
     return {
       message: "",
     };
+  },
+  computed: {
+    now: function () {
+      const time = new Date();
+      return $(time.getHours());
+    },
   },
 };
 </script>
