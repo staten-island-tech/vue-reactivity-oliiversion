@@ -17,6 +17,7 @@ export default {
     };
   },
   computed: {
+    "this dont workj"
     now: function () {
       const time = new Date();
       return $(time.getHours());
