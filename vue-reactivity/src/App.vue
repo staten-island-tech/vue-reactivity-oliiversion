@@ -16,7 +16,7 @@
 
       <nav>
         <router-link to="/">Good Morning Sunshine!</router-link>
-        <router-link to="/about">The world says Hello!</router-link>
+        <router-link to="/cart">Shopping Cart!</router-link>
       </nav>
     </div>
   </header>
