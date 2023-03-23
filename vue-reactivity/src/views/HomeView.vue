@@ -12,9 +12,20 @@ import TheWelcome from "../components/TheWelcome.vue";
     <button v-on:click="authState" v-if="inside">Inside!</button>
     <button @click="authState" v-else>Outside!</button>
   </div>
+  <form @submit.prevent="addTodo">
+    <input v-model="review" />
+    <button>Add Review</button>
+  </form>
+  <ul>
+    <li v-for="review in review" :key="revew.id">
+      {{ review.text }}
+      <button @click="removeReview(review)">X</button>
+    </li>
+  </ul>
 </template>
 
 <script>
+let id = 0;
 export default {
   name: "Home",
   components: {},
@@ -24,6 +35,12 @@ export default {
       silly: true,
       sillythings: ["loser", "winner", "blue"],
       inside: false,
+      newReview: "",
+      review: [
+        { id: id++, text: "Amazing!" },
+        { id: id++, text: "Okay." },
+        { id: id++, text: "Pretty Good." },
+      ],
     };
   },
   methods: {
@@ -33,6 +50,13 @@ export default {
       } else {
         this.inside = false;
       }
+    },
+    addReview() {
+      this.review.push({ id: id++, text: this.newReview });
+      this.newReview = "";
+    },
+    removeReview(review) {
+      this.review = this.review.filter((t) => t !== review);
     },
   },
 };
