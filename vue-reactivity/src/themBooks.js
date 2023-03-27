@@ -90,5 +90,13 @@ export default {
       blurb:
         "Popular guy Yatora realizes he's just going through the motions to make other people happy.  It's an effortless performance, and, ultimately a dull one. But he wanders into the art room one day, and a lone painting captures his eye, awakening him to a kind of beauty he never knew. Compelled and consumed, he dives in headfirst—and he's about to learn how savage and unforgiving art can be. He finds himself in a new passion: painting. But untethering yourself from all your past expectations is dangerous as well as thrilling.",
     },
+    {
+      name: "i fell in ove with hope",
+      price: 7.58,
+      author: "Lancali",
+      image: "https://m.media-amazon.com/images/I/51ZnBH4OxpL.jpg",
+      blurb:
+        "Against the unforgiving landscape of a hospital, I fell in love with a mischievous, sun-eyed boy who became my only joy in that desolate place. That is what made it all the more soul-crushing when he committed suicide in front of me.",
+    },
   ],
 };
