@@ -1,6 +1,6 @@
 export default {
   name: themBooks,
-  datat: [
+  data: [
     {
       name: "The Great Gatsby",
       price: 13.99,

@@ -17,14 +17,19 @@ import TheWelcome from "../components/TheWelcome.vue";
     <button>Add Review</button>
   </form>
   <ul>
-    <li v-for="review in review" :key="revew.id">
+    <!--     <li v-for="review in review" :key="revew.id">
       {{ review.text }}
       <button @click="removeReview(review)">X</button>
-    </li>
+    </li> -->
   </ul>
 </template>
 
 <script>
+var themBooks = new Vue({
+  el: "#themBooks",
+  data: {},
+});
+
 let id = 0;
 export default {
   name: "Home",
