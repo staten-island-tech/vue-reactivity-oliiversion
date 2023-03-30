@@ -25,11 +25,6 @@ import TheWelcome from "../components/TheWelcome.vue";
 </template>
 
 <script>
-var themBooks = new Vue({
-  el: "#themBooks",
-  data: {},
-});
-
 let id = 0;
 export default {
   name: "Home",
