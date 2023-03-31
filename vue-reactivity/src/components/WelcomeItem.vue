@@ -9,6 +9,7 @@
       </h3>
       <slot></slot>
     </div>
+    <div class="card"></div>
   </div>
 </template>
 
