@@ -6,16 +6,16 @@
     <img
       alt="Vue logo"
       class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
+      src="https://i.pinimg.com/736x/dd/64/da/dd64da585bc57cb05e5fd4d8ce873f57--library-logo-kids-logo.jpg"
+      width="250"
+      height="200"
     />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <router-link to="/">Good Morning Sunshine!</router-link>
+        <router-link to="/">Books!</router-link>
         <router-link to="/cart">Shopping Cart!</router-link>
       </nav>
     </div>

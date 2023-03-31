@@ -13,6 +13,16 @@
 </template>
 
 <style scoped>
+body {
+  background-color: rgb(22, 22, 24);
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
 .item {
   margin-top: 2rem;
   display: flex;
