@@ -14,9 +14,6 @@
 </template>
 
 <style scoped>
-body {
-  background-color: rgb(22, 22, 24);
-}
 .card {
   display: flex;
   flex-wrap: wrap;
