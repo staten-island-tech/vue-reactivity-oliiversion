@@ -4,14 +4,12 @@
     <img :src="image" alt="" />
     <p>${{ cost }} | Calories: {{ cals }}</p>
     <p class="desc">{{ description }}</p>
-    <AddtoCartButton @click="test"
-      >Add {{ name }} to Cart ${{ cost }}</AddtoCartButton
-    >
+    <AddButton @click="test">Add {{ name }} to Cart ${{ cost }}</AddButton>
   </div>
 </template>
 
 <script>
-import AddtoCartButton from "./AddtoCart.vue";
+import AddButton from "./AddtoCart.vue";
 import { store } from "./store.js";
 
 export default {
@@ -29,7 +27,7 @@ export default {
     };
   },
   components: {
-    AddtoCartButton,
+    AddButton,
   },
   methods: {
     test() {

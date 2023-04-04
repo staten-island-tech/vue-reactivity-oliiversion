@@ -4,15 +4,15 @@
       <h2 class="name">{{ name }}</h2>
       <img :src="image" alt="" />
       <p>{{ cost }}</p>
-      <removefromCartButton @click="cartitems = !cartitems">
+      <removeButton @click="cartitems = !cartitems">
         Remove {{ name }} from Cart ${{ cost }}
-      </removefromCartButton>
+      </removeButton>
     </div>
   </div>
 </template>
 
 <script>
-import removefromCartButton from "./RemovefromCart.vue";
+import removeButton from "./RemovefromCart.vue";
 
 export default {
   name: "Cart",
@@ -28,7 +28,7 @@ export default {
     };
   },
   components: {
-    removefromCartButton,
+    removeButton,
   },
   methods: {},
 };

@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "removefromCartButton",
+  name: "removeButton",
   data() {
     return {};
   },

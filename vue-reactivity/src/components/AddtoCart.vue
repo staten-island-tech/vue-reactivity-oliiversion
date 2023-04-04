@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "AddtoCartButton",
+  name: "AddButton",
   data() {
     return {};
   },
