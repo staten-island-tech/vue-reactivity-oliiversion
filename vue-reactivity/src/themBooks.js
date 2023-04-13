@@ -1,6 +1,4 @@
-export default {
-  name: themBooks,
-  data: [
+const themBooks = [
     {
       name: "The Great Gatsby",
       price: 13.99,
@@ -98,5 +96,5 @@ export default {
       blurb:
         "Against the unforgiving landscape of a hospital, I fell in love with a mischievous, sun-eyed boy who became my only joy in that desolate place. That is what made it all the more soul-crushing when he committed suicide in front of me.",
     },
-  ],
-};
+  ];
+  export { themBooks };
