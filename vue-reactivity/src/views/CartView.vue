@@ -1,14 +1,14 @@
 <script>
 import ShoppingCart from "../components/shoppingCart.vue";
 import { store } from "../components/store.js";
-import storeInventory from "../components/storeInventory.vue";
+import themBooks from "../components/router/HomeView.vue";
 export default {
   data() {
     return {
       store,
     };
   },
-  components: { ShoppingCart },
+  components: { ShoppingCart, themBooks },
 };
 </script>
 <template>
@@ -36,7 +36,7 @@ export default {
   border: 1px solid black;
   padding: 10px;
   scale: 70%;
-  font-family: "Delicious Handrawn", cursive;
+  font-family: "Strikhand";
   width: 10rem;
   height: 10rem;
 }
