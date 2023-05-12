@@ -10,14 +10,13 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <header class="header">CSGO SKINS</header>
-  <RouterLink class="router" id="chesey" to="/">Shop</RouterLink>
-  <RouterLink class="router" id="chese" to="/cart">View Cart</RouterLink>
+  <RouterLink class="router" to="/">Shop</RouterLink>
+  <RouterLink class="router" to="/cart">View Cart</RouterLink>
   <RouterView />
 </template>
 
 <style>
-.body {
-}
+
 .header {
   text-align: center;
   font-size: 40px;

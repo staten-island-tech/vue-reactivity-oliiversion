@@ -4,7 +4,7 @@
     <p class="price">${{ price }}</p>
     <img :src="getImage" alt="" />
     <h3 class="description">{{ description }}</h3>
-    <p class="condition">Condition: {{ condition }}</p>
+    <p class="author">Author: {{ author }}</p>
     <button @click="buy" class="buy">Add to Cart</button>
   </div>
 </template>
@@ -15,10 +15,10 @@ export default {
   name: "storeInventory",
   props: {
     name: String,
+    author: String,
+    image: String,
     price: Number,
     description: String,
-    image: String,
-    condition: String,
   },
   computed: {
     getImage: function () {
@@ -30,9 +30,8 @@ export default {
     buy: function () {
       store.cart.push({
         name: this.name,
+        author: this.author,
         price: this.price,
-        condition: this.condition,
-        image: this.image,
       });
     },
   },

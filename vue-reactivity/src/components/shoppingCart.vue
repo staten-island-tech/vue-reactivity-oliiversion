@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import themBooks from "./components/router/HomeView.vue";
+import themBooks from "./components/views/HomeView.vue";
 import { store } from "../components/store.js";
 components: {
   themBooks, store;
@@ -57,7 +57,7 @@ export default {
 <style>
 .coolcard {
   background-color: rgb(3, 83, 50);
-  text: aliceblue;
+  color: aliceblue;
   text-shadow: navy 2px;
   text-align: center;
   display: flex;
@@ -67,7 +67,7 @@ export default {
   justify-content: space-evenly;
   font-size: 1rem;
   margin: 20px auto;
-  border: 1px solid rgb(197, 233, 211)41, 241, 241);
+  border: 1px solid rgb(197, 233, 211);
   padding: 10px;
   scale: 30%;
   font-family: "Delicious Handrawn", cursive;

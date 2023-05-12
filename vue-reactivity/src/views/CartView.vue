@@ -1,7 +1,7 @@
 <script>
 import ShoppingCart from "../components/shoppingCart.vue";
 import { store } from "../components/store.js";
-import themBooks from "../components/router/HomeView.vue";
+import themBooks from "../components/views/HomeView.vue";
 export default {
   data() {
     return {
