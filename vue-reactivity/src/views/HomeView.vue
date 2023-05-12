@@ -1,5 +1,4 @@
 <script>
-import themBooks from "../components/views/HomeView.vue";
 import CartView from "./CartView.vue";
 import { store } from "../components/store";
 export default {
