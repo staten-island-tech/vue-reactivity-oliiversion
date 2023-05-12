@@ -1,27 +1,39 @@
 <script>
-import CartView from "./CartView.vue";
-import { store } from "../components/store";
+import Card from "../components/Card.vue";
+import AddtoCartButton from "../components/AddtoCart.vue";
+import CartButton from "../components/CartButton.vue";
+import Cart from "../components/Cart.vue";
+import { store } from "../components/store.js";
+
 export default {
-  name: "HomeView",
-  components: { themBooks, CartView },
+  name: "Bookss",
+  components: {
+    Card,
+    AddtoCartButton,
+    CartButton,
+    Cart,
+  },
+  methods: {},
   data() {
     return {
       store,
-      items: [
+      cartdiv: false,
+      carts: [],
+      books: [
         {
           id: 1,
           name: "The Great Gatsby",
-          price: 13.99,
+          cost: 13.99,
           author: "F. Scott Fitzgerald",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780743273565_p0_v14_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
           description:
             "F. Scott Fitzgerald's novel, The Great Gatsby, follows Jay Gatsby, a man who orders his life around one desire: to be reunited with Daisy Buchanan, the love he lost five years earlier. Gatsby's quest leads him from poverty to wealth, into the arms of his beloved, and eventually to death.",
         },
-        {
+        { 
           id: 2,
           name: "They Both Die at the End",
-          price: 9.99,
+          cost: 9.99,
           author: "Adam Silvera",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780063278547_p0_v1_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D",
@@ -31,7 +43,7 @@ export default {
         {
           id: 3,
           name: "The Perks of Being a Wallflower: 20th Anniversary Edition",
-          price: 13.99,
+          cost: 13.99,
           author: "Stephen Chbosky",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9781982110994_p0_v3_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
@@ -41,7 +53,7 @@ export default {
         {
           id: 4,
           name: "The Book Thief",
-          price: 12.99,
+          cost: 12.99,
           author: "Markus Zusak",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780375842207_p0_v12_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
@@ -51,7 +63,7 @@ export default {
         {
           id: 5,
           name: "Milk and Honey",
-          price: 11.99,
+          cost: 11.99,
           author: "Rupi Kaur",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9781449474256_p0_v11_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
@@ -61,7 +73,7 @@ export default {
         {
           id: 6,
           name: "Little Women and Other Novels",
-          price: 25.0,
+          cost: 25.0,
           author: "Louisa May Alcott",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&product=path%5B/pimages/9781435167179_p1_v9%5D&call=url%5Bfile:common/decodeProduct.chain%5D",
@@ -70,7 +82,7 @@ export default {
         {
           id: 7,
           name: "The Secret Life of Bees",
-          price: 14.99,
+          cost: 14.99,
           author: "Sue Monk Kidd",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780142001745_p0_v9_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
@@ -80,7 +92,7 @@ export default {
         {
           id: 8,
           name: "The Song of Achilles",
-          price: 14.99,
+          cost: 14.99,
           author: "Madeline Miller",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9780062060624_p0_v4_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B300x10000%5D&sink=format%5Bwebp%5D",
@@ -90,7 +102,7 @@ export default {
         {
           id: 9,
           name: "If He Had Been with Me",
-          price: 10.99,
+          cost: 10.99,
           author: "Laura Nowlin",
           image:
             "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9781728205489_p0_v2_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D",
@@ -100,7 +112,7 @@ export default {
         {
           id: 10,
           name: "Blue Period Volume 1",
-          price: 12.99,
+          cost: 12.99,
           author: "Tsubasa Yamaguchi",
           image:
             "https://prodimage.images-bn.com/pimages/9781646511129_p0_v2_s600x595.jpg",
@@ -110,7 +122,7 @@ export default {
         {
           id: 11,
           name: "i fell in love with hope",
-          price: 7.58,
+          cost: 7.58,
           author: "Lancali",
           image: "https://m.media-amazon.com/images/I/51ZnBH4OxpL.jpg",
           description:
@@ -119,69 +131,64 @@ export default {
       ],
     };
   },
-
-  props: {
-    name: String,
-    price: Number,
-    description: String,
-    image: String,
-    condition: String,
-  },
-  computed: {
-    getImage: function () {
-      return this.image;
-    },
-  },
-
-  methods: {
-    viewProduct(item) {
-      this.item = item;
-      console.log(this.item);
-    },
-  },
 };
 </script>
 
 <template>
-  <div>
-    <img :src="getImage" alt="" />
-  </div>
-  <storeInventory
-    v-for="item in items"
-    :name="item.name"
-    :image="item.image"
-    :price="item.price"
-    :description="item.description"
-    :condition="item.condition"
-  />
+  <main>
+    <div class="cartnav">
+      <CartButton class="cartbutton" @click="cartdiv = !cartdiv"
+        >Cart</CartButton
+      >
+    </div>
+    <div v-show="cartdiv" class="cartdiv">
+      <div class="cartitemsdiv">
+        <h3>Items:</h3>
+        <Cart
+          v-for="item in store.cart"
+          :key="item.name"
+          :name="item.name"
+          :cost="item.cost"
+          :image="item.image"
+        />
+      </div>
+    </div>
+    <div class="bookss">
+      <Card
+        v-for="books in books"
+        :key="books.name"
+        :name="books.name"
+        :cost="books.cost"
+        :image="books.image"
+        :description="books.description"
+        :author="books.author"
+      />
+    </div>
+  </main>
 </template>
 
-<style>
-.coolcard {
-  background-color: aliceblue;
-  text-align: center;
+<style scoped>
+.menu,
+.cartdiv,
+.cartnav {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
   justify-content: space-evenly;
-  font-size: 1rem;
-  margin: 20px auto;
-  border: 1px solid black;
-  padding: 10px;
-  scale: 70%;
-  font-family: "Delicious Handrawn", cursive;
 }
-
-body,
-html {
-  margin: 0;
-  padding: 0;
+.cartdiv {
+  width: 700px;
+  background-color: rgb(125, 180, 125);
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 50px;
 }
-
-.buy {
-  margin-top: 10px;
-  left: 30px;
-  max-height: 20px;
+* {
+  color: black;
+}
+h3 {
+  font-size: 2.5vh;
+  font-weight: bold;
 }
 </style>
