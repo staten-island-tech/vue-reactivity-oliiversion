@@ -5,7 +5,7 @@
 <script>
 export default {
   name: "CartButton",
-  /*   data() {
+    data() {
     return {
       total: 0,
     };
@@ -14,7 +14,7 @@ export default {
     cartCount() {
       this.total++;
     },
-  }, */
+  },
 };
 </script>
 
