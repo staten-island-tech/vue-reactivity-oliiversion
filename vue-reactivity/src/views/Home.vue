@@ -30,7 +30,7 @@ export default {
           description:
             "F. Scott Fitzgerald's novel, The Great Gatsby, follows Jay Gatsby, a man who orders his life around one desire: to be reunited with Daisy Buchanan, the love he lost five years earlier. Gatsby's quest leads him from poverty to wealth, into the arms of his beloved, and eventually to death.",
         },
-        { 
+        {
           id: 2,
           name: "They Both Die at the End",
           cost: 9.99,
