@@ -18,7 +18,7 @@ const themBooks = [
         "Discovering they have less than 24 hours to live, two young strangers embark on an adventure of a life-time, (within the confines of one day,) in this moving and unforgettable bestseller from Adam Silvera. A love story with a difference - an unforgettable tale of life, loss and making each day count.",
     },
     {
-      name: "The Perks of Being a Wallflower: 20th Anniversary Edition",
+      name: "The Perks of Being a Wallflower",
       cost: 13.99,
       author: "Stephen Chbosky",
       image:

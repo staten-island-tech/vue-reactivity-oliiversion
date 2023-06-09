@@ -42,7 +42,7 @@ export default {
         },
         {
           id: 3,
-          name: "The Perks of Being a Wallflower: 20th Anniversary Edition",
+          name: "The Perks of Being a Wallflower",
           cost: 13.99,
           author: "Stephen Chbosky",
           image:

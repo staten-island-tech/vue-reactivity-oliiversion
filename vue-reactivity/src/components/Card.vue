@@ -47,20 +47,21 @@ export default {
 <style scoped>
 .cards {
   width: 350px;
+  flex-wrap: wrap;
   background-color: rgb(125, 180, 125);
   text-align: center;
   padding: 15px;
   margin: auto;
-  margin-bottom: 30px;
-  border-radius: 50px;
-  height: 370px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  height: 770px;
   margin-left: 50px;
   margin-right: 50px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 img {
   width: 200px;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 h2 {
   font-size: 3vh;
