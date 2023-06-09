@@ -3,7 +3,7 @@
     <h2 class="name">{{ name }}</h2>
     <img :src="image" alt="" />
     <p>${{ cost }} | Author: {{ author }}</p>
-    <p class="desc">{{ description }}</p>
+    <p class="desc">{{ blurb }}</p>
     <AddtoCartButton @click="test"
       >Add {{ name }} to Cart ${{ cost }}</AddtoCartButton
     >
@@ -21,7 +21,7 @@ export default {
     author: String,
     cost: Number,
     image: String,
-    description: String,
+    blurb: String,
   },
   data() {
     return {
@@ -56,6 +56,7 @@ export default {
   height: 370px;
   margin-left: 50px;
   margin-right: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 img {
   width: 200px;
@@ -63,11 +64,14 @@ img {
 }
 h2 {
   font-size: 3vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .desc {
   margin-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .name {
   font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 </style>

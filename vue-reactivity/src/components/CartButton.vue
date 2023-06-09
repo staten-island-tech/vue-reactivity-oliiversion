@@ -33,6 +33,7 @@ button {
 }
 button:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 button:active {
   transform: scale(0.9);
